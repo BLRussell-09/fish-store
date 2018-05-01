@@ -1,1 +1,3 @@
-console.log('hi');
+const events = require('./events');
+
+events();

@@ -22,12 +22,6 @@ const buttonText = () =>
   });
 };
 
-$('#show-sale').click(() =>
-{
-  buttonText();
-  filterFish();
-});
-
 // Add fish to "Basket"
 
 const moveToCart = (e) =>
@@ -37,4 +31,14 @@ const moveToCart = (e) =>
   $('#snagged').append(fishCard);
 };
 
-$('button.add').click(moveToCart);
+const bindEvents = () =>
+{
+  $('button.add').click(moveToCart);
+  $('#show-sale').click(() =>
+  {
+    buttonText();
+    filterFish();
+  });
+};
+
+module.exports = bindEvents;
