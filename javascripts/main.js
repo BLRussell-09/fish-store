@@ -1,3 +1,3 @@
-const events = require('./events');
+const init = require('./data');
 
-events();
+init();
